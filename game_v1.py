@@ -4,6 +4,34 @@ import random
 
 os.system('clear')
 
+def title():
+	print("""
+		*******************************
+		*                             *
+		*                             *
+		*                             *
+		*    Welcome to Blackjack!    *
+		*                             *
+		*                             *
+		*                             *
+		*      ♠    ♦     ♥    ♣      *
+		*                             *
+		*                             *
+		*   Press 'enter' to begin    *
+		*                             *
+		*                             *
+		*      ♠    ♦     ♥    ♣      *
+		*                             *
+		*                             *
+		*                             *
+		*******************************
+		""")
+
+	input()
+
+suits = ['Spades', 'Diamonds', 'Hearts', 'Clubs']
+suits_symbols = ['♠', '♦', '♥', '♣']
+
 cards = {
 	2 	: 2,
 	3		: 3,
@@ -36,6 +64,8 @@ def show(player,hand,show):
 	print(player,end='')
 	for card in range(0,show):
 		print(card)
+
+title()
 
 deal(hands['player'])
 deal(hands['dealer'])
